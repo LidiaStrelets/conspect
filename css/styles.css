@@ -1,51 +1,46 @@
-tr:hover {
-  background-color: thistle;
+pre {
+  font-family: caveat;
+  color: #2f3f10;
+  font-size: 25px;
 }
-
-.departments > li {
-  border: 1px solid tomato;
-}
-
-a:visited {
-  color: yellow;
-  text-decoration: underline;
-}
-.link:hover {
-  cursor: copy;
-  color: green;
+pre::first-letter {
+  font-family: tahoma, serif;
   font-size: 30px;
+  color: #ff8916;
 }
-
-/* .link {
-  text-decoration: none;
+pre::selection {
+  color: #f0f66f;
+  background-color: #0fffaa;
 }
-.about {
-  color: khaki;
+.first {
+  text-decoration: underline wavy red;
+  text-transform: uppercase;
+  text-align: left;
+  text-indent: 20px;
+  line-height: 2;
+  text-shadow: 10px 10px 4px #05ac3d;
+  font-style: italic;
 }
-.insta {
-  color: lawngreen;
+.second {
+  text-decoration: overline double green;
+  text-transform: lowercase;
+  text-align: right;
+  line-height: 4;
+  text-shadow: -10px -10px 14px #b1088c;
+  font-style: oblique;
 }
-.twi {
-  color: lightcoral;
+.third {
+  text-decoration: line-through dotted blue;
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 1, 5;
+  text-shadow: 10px 10px 1px #dd4e0c;
+  font-style: initial;
 }
-#title {
-  color: orange;
-  font-weight: 500;
-} */
-/* 
-
-  font-size: 30px;
+.fourth {
+  text-indent: 20%;
+  text-align: justify;
+  text-shadow: 10px 10px 4px #05ac3d, 15px 15px 14px #0c1599,
+    20px 20px 24px #d4434a;
+  text-decoration: underline overline dashed yellow;
 }
-a {
-  text-decoration: none;
-}
-.title {
-  font-weight: 500;
-}
-.text {
-  font-size: 10px;
-  color: indigo;
-}
-.link {
-  text-decoration: underline;
-} */
