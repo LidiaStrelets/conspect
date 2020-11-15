@@ -1,46 +1,120 @@
-pre {
-  font-family: caveat;
-  color: #2f3f10;
-  font-size: 25px;
+body {
+  margin: 0;
 }
-pre::first-letter {
-  font-family: tahoma, serif;
-  font-size: 30px;
-  color: #ff8916;
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-top: -10px;
 }
-pre::selection {
-  color: #f0f66f;
-  background-color: #0fffaa;
+.item {
+  margin-left: 10px;
+  margin-top: 10px;
+  flex-basis: calc(100% / 3 - 10px);
+}
+
+.logo {
+  padding: 10px;
+  text-decoration: none;
+  border: 2px solid #4caf50;
+  border-radius: 4px;
+}
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 2px solid #00bcd4;
+  border-radius: 4px;
+}
+.menu {
+  display: flex;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  border: 2px solid blue;
+  border-radius: 4px;
+  justify-content: center;
+}
+
+.menu > .item {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+.menu > .item:not(:last-child) {
+  margin-right: 10px;
+}
+.list-item {
+  border: 2px solid red;
+  width: 25px;
+  text-align: center;
+  border-radius: 100%;
+}
+.list-item:nth-last-child(-n + 7) {
+  background-color: seagreen;
+}
+.menu .link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+.menu .link:hover {
+  text-decoration: underline;
+}
+.pane {
+  display: none;
+  padding: 8px;
+  border: 1px solid blue;
+  border-radius: 3px;
+}
+.is-active {
+  display: block;
+}
+.linka {
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 3px;
+  background-color: teal;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.firsts {
+  background-color: lightgreen;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+.seconds {
+  background-color: lightpink;
+}
+.thirds {
+  background-color: lightseagreen;
+}
+.fourths {
+  background-color: lime;
 }
 .first {
-  text-decoration: underline wavy red;
-  text-transform: uppercase;
-  text-align: left;
-  text-indent: 20px;
-  line-height: 2;
-  text-shadow: 10px 10px 4px #05ac3d;
-  font-style: italic;
+  background-color: khaki;
+  margin: 0;
+  padding: 0;
 }
 .second {
-  text-decoration: overline double green;
-  text-transform: lowercase;
-  text-align: right;
-  line-height: 4;
-  text-shadow: -10px -10px 14px #b1088c;
-  font-style: oblique;
+  background-color: lawngreen;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  padding: 30px;
+  border: 3px solid red;
+  border-radius: 30%;
 }
 .third {
-  text-decoration: line-through dotted blue;
-  text-transform: capitalize;
-  text-align: center;
-  line-height: 1, 5;
-  text-shadow: 10px 10px 1px #dd4e0c;
-  font-style: initial;
+  background-color: lightblue;
 }
 .fourth {
-  text-indent: 20%;
-  text-align: justify;
-  text-shadow: 10px 10px 4px #05ac3d, 15px 15px 14px #0c1599,
-    20px 20px 24px #d4434a;
-  text-decoration: underline overline dashed yellow;
+  background-color: lightgreen;
 }
