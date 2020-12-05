@@ -1,56 +1,48 @@
-.container {
-  display: flex;
-  justify-content: center;
-}
+a {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  margin: 100px;
+  background-color: red;
+  color: white;
 
-.box {
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  margin: 5px;
-
-  line-height: 150px;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
-  user-select: none;
 
-  background-color: #fff;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+a::before {
+  position: absolute;
+  top: 18px;
+  right: 20px;
 
-  animation-name: changeBgColor;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-delay: 1s;
+  content: '';
+  display: inline-block;
+
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/facebook.svg);
+  background-size: contain;
+
+  transition: opacity 500ms linear;
+}
+a::after {
+  content: '';
+  display: inline-block;
+
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/instagram.svg);
+  background-size: contain;
+  opacity: 0;
+  transition: opacity 500ms linear;
 }
 
-.box:nth-child(1) {
-  /*  Значение по умолчанию  */
-  animation-fill-mode: none;
+a:hover::before {
+  opacity: 0;
 }
-
-.box:nth-child(2) {
-  animation-fill-mode: forwards;
-}
-
-.box:nth-child(3) {
-  animation-fill-mode: backwards;
-}
-
-.box:nth-child(4) {
-  animation-fill-mode: both;
-}
-
-@keyframes changeBgColor {
-  0% {
-    background-color: teal;
-  }
-
-  50% {
-    background-color: orange;
-  }
-
-  100% {
-    background-color: deepskyblue;
-  }
+a:hover::after {
+  opacity: 1;
 }
