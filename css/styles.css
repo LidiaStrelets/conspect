@@ -14,7 +14,7 @@
   transform-origin: center right;
 }
 
-.card:hover.is-flipped {
+.scene:hover .is-flipped {
   transform: translateX(-100%) rotateY(180deg);
 }
 
