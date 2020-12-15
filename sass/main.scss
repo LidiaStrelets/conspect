@@ -1,0 +1,14 @@
+$backgroundcolor: red;
+$textcolor: yellow;
+
+$icons: 'insta', 'facebook', 'twitter', 'linkedin';
+
+@mixin generateIcons($icon-list) {
+  @each $icon-name in $icons {
+    .icon-#{$icon-name} {
+      background-image: url(../images/icons/#{$icon-name}.svg);
+    }
+  }
+}
+
+@include generateIcons($icons);
