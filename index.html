@@ -19,7 +19,16 @@
     alt="photo" 
     width="270px"> -->
     
-    <ul class="gallery">
+<img srcset=
+                "./images/responsive/img1x-270.jpg 270w, 
+                 ./images/responsive/img2x-540.jpg 540w, 
+                 ./images/responsive/img3x-810.jpg 810w,
+                 ./images/responsive/img4x-1080.jpg 1080w"
+    sizes="(min-width: 701px) 25vw, (min-width: 241px) 50vw, 100vw" 
+    src="./images/responsive/img1x-270.jpg" alt="">
+
+
+    <!-- <ul class="gallery">
         <li class="gallery__item">
             <img srcset=
                 "./images/responsive/img1x-270.jpg 270w, 
@@ -56,7 +65,7 @@
                 sizes="(min-width: 701px) 25vw, (min-width: 241px) 50vw, 100vw"
                  src="./images/responsive/img1x-270.jpg" alt="">
         </li>
-    </ul>
+    </ul> -->
 </div>
 </body>
 </html>
