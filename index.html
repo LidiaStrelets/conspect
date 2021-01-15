@@ -4,16 +4,60 @@
     <meta charset="UTF-8">
     <meta name="description" content="Изучение основ HTML5 для новичков" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Занятие 11-12</title>
+    <title>Отзывчивая графика</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css
 " rel="stylesheet">
-    <link href="./dist/css/main.min.css" rel="stylesheet">
+    <link href="./css/main.min.css" rel="stylesheet">
 </head>
 <body>
-<form>
-    <input type="name" id="name" name="name" placeholder=" "/>
-    <label for="name">Enter your name</label>
-</form>
+<div class="container">
+    
+    <!-- <img srcset="./images/responsive/img1x-270.jpg 1x, 
+                 ./images/responsive/img2x-540.jpg 2x, 
+                 ./images/responsive/img3x-810.jpg 3x" 
+    src="./images/responsive/img1x-270.jpg" 
+    alt="photo" 
+    width="270px"> -->
+    
+    <ul class="gallery">
+        <li class="gallery__item">
+            <img srcset=
+                "./images/responsive/img1x-270.jpg 270w, 
+                 ./images/responsive/img2x-540.jpg 540w, 
+                 ./images/responsive/img3x-810.jpg 810w,
+                 ./images/responsive/img4x-1080.jpg 1080w" 
+                 sizes="(min-width: 701px) 25vw, (min-width: 241px) 50vw, 100vw"
+            src="./images/responsive/img1x-270.jpg" alt="">
+        </li>
+        <li class="gallery__item">
+            <img srcset=
+                "./images/responsive/img1x-270.jpg 270w, 
+                 ./images/responsive/img2x-540.jpg 540w, 
+                 ./images/responsive/img3x-810.jpg 810w,
+                 ./images/responsive/img4x-1080.jpg 1080w"
+                sizes="(min-width: 701px) 25vw, (min-width: 241px) 50vw, 100vw"
+                 src="./images/responsive/img1x-270.jpg" alt="">
+        </li>
+        <li class="gallery__item">
+            <img srcset=
+                "./images/responsive/img1x-270.jpg 270w, 
+                 ./images/responsive/img2x-540.jpg 540w, 
+                 ./images/responsive/img3x-810.jpg 810w,
+                 ./images/responsive/img4x-1080.jpg 1080w"
+                sizes="(min-width: 701px) 25vw, (min-width: 241px) 50vw, 100vw"
+                 src="./images/responsive/img1x-270.jpg" alt="">
+        </li>
+        <li class="gallery__item">
+            <img srcset=
+                "./images/responsive/img1x-270.jpg 270w, 
+                 ./images/responsive/img2x-540.jpg 540w, 
+                 ./images/responsive/img3x-810.jpg 810w,
+                 ./images/responsive/img4x-1080.jpg 1080w"
+                sizes="(min-width: 701px) 25vw, (min-width: 241px) 50vw, 100vw"
+                 src="./images/responsive/img1x-270.jpg" alt="">
+        </li>
+    </ul>
+</div>
 </body>
 </html>
 
