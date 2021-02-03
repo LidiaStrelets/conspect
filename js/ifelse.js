@@ -1,36 +1,22 @@
-// console.log('Before');
-// if (5>10) {
-//     console.log('body');
+// let person;
+// let age;
+// age = prompt("Введите Ваш возраст");
+
+// age = Number(age);
+// if (age >= 16) {
+//     person = 'adult';
+//     console.log(person);
+//     console.log('Поздравляю, Вы уже взрослый!');
 // }
-// console.log('After');
+//     else {
+//     person = 'child';
+//     console.log(person);
+//     console.log('Прости, ты еще ребенок(');
+//     }
 
-// let money = 100;
-// const price = 2000;
-
-// console.log(`Общая стоимость заказа ${price} кредитов.`);
-
-// if (money >= price) {
-//     money -= price;
-//     console.log(`После совершения покупки у Вас останется ${price} кредитов`);
-// }
-// else{console.log(`У Вас недостаточно средств для покупки`);}
-//  console.log('Хотите продолжить покупки?');
-
-const totalExpenses = 100;
-let discount=0;
-
-if (totalExpenses >= 500 && totalExpenses < 1000) {
-    discount = 2;
-    console.log(`Вы бронзовый клиент, скидка составляет ${discount}%` );
-}
-else if (totalExpenses >= 1000 && totalExpenses < 5000) {
-     discount = 5;
-    console.log(`Вы серебряный клиент, скидка составляет ${discount}%` );
-}
-else if (totalExpenses >= 5000) {
-     discount = 20;
-    console.log(`Вы золотой клиент, скидка составляет ${discount}%` );
-}
-else {
-    console.log('Общая сумма покупок недостаточна, Вы не попадаете в программу лояльности');
-}
+// let years = prompt('Введите Ваши годики');
+// years = Number(years);
+// console.log(`Вы хотите сказать, что Вам ${years} годиков???`);
+// const category = years > 16 ? 'взрозлый' : 'ребенок';
+// console.log('Так Вы у нас', category);
+console.log(true && 5 > 3 && "javascript");
