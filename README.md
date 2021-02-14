@@ -23,3 +23,7 @@
     <img src="https://picsum.photos/id/237/800/400" alt="Чёрный щенок" />
 
   </picture>
+
+<!-- округление до конкретного знака -->
+
+https://www.w3schools.com/jsref/jsref_tofixed.asp

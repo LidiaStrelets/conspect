@@ -75,18 +75,86 @@ clients[7] ='Pear';
 // console.log(`Сумма больших чисел составляет ${summary}; их позиции ${requieredNumbers}`);
 
 
-const myMatrix = [
-    [1, 5, 7],
-    [2, 11, 9],
-    [0, -1, 9],
-    [-2, -3, 0]
-];
+// const myMatrix = [
+//     [1, 5, 7],
+//     [2, 11, 9],
+//     [0, -1, 9],
+//     [-2, -3, 0]
+// ];
 // console.log(myMatrix[0][2]);
 // console.log(myMatrix[1][4]);
 // console.log(myMatrix[2][1]);
 // console.log(myMatrix[3][0]);
-for (let i = 0; i < myMatrix.length; i += 1){
-    for (let j = 0; j < myMatrix[i].length; j += 1){
-        console.log(`Element in ${i+1} line number ${j+1} is ${myMatrix[i][j]}`);
-    }
-}
+// for (let i = 0; i < myMatrix.length; i += 1){
+//     for (let j = 0; j < myMatrix[i].length; j += 1){
+//         console.log(`Element in ${i+1} line number ${j+1} is ${myMatrix[i][j]}`);
+//     }
+// }
+
+// const phrase = 'hello my dear friend, you are so nice!';
+// console.log(phrase.split('e'));
+
+// console.log(clients.join(' '));
+
+// console.log(clients.indexOf('Apple'));
+// console.log(clients.includes('Ajx'));
+
+
+// const myNumbers = [];
+// myNumbers.push(7);
+// console.log(myNumbers);
+// myNumbers.push(2);
+// console.log(myNumbers);
+// myNumbers.push(8);
+// console.log(myNumbers);
+// myNumbers.push(1);
+// console.log(myNumbers);
+// myNumbers.pop();
+// console.log(myNumbers);
+// myNumbers.pop();
+// console.log(myNumbers);
+
+// console.log(clients);
+// clients.shift();
+// console.log(clients);
+// clients.unshift('Dear');
+// console.log(clients);
+
+// const clientsCopy = clients.slice(-2);
+// console.log(clients);
+
+// const clientsCut = clients.splice(3, 4);
+// console.log(clients);
+// console.log(clientsCut);
+
+
+// const rainbow = ['red', 'orange', 'yellow', 'blue', 'indigo', 'violet'];
+// console.log(rainbow);
+// let fixedRainbow = rainbow.splice(3, 0, 'green');
+// console.log(rainbow);
+// console.log(fixedRainbow);
+
+// fixedRainbow = rainbow.splice(3, 2, 'don_t know');
+// console.log(rainbow);
+// console.log(fixedRainbow);
+
+// console.log(clients);
+// console.log(rainbow);
+
+// const sheet = rainbow.concat(clients);
+// console.log(sheet);
+// console.log(clients);
+// console.log(rainbow);
+
+
+// console.table(clients)
+
+
+let a = 5;
+let b = a;
+console.log('a = ', a);
+console.log('b = ', b);
+a = 7;
+console.log('a = ', a);
+console.log('b = ', b);
+console.log(a===b);
