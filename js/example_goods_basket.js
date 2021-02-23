@@ -7,18 +7,26 @@ const basket = {
         }
         console.table(this.items);
      },
-    addItem(productName) { 
-        for (const item of this.items) {
-            if (item.name === productName) {
+    addItem(product) { 
+        const modificatedItem = {
+            ...product,
+            quantity: 1,
+        }
+        // console.log(modificatedItem);
+        const { items } = this;
+        for (const item of items) {
+            if (item.name === modificatedItem.name) {
                 item.quantity += 1;
                 return;
             }
         }
-        this.items.push(productName);
-        productName.quantity = 1;
+        items.push(modificatedItem);
+        modificatedItem.quantity = 1;
     },
     removeItem(productName) { 
-        const values = Object.values(this.items);
+        const { items } = this;
+
+        const values = Object.values(items);
 
         const names = [];
         for (const value of values) {
@@ -31,23 +39,24 @@ const basket = {
         }
 
         const numberToRemove = names.indexOf(productName)
-        this.items.splice(numberToRemove, 1);
+        items.splice(numberToRemove, 1);
     },
     clearAll() { 
         this.items = [];
         return 'Все товары удалены из корзины';
     },
     countTotalPrice() {
-        const goods = this.items;
+        const { items: goods } = this;
         // console.log(goods);
         let total = 0;
-        for (const good of goods) {
-            total += good.price;
+        for (const { price , quantity} of goods) {
+            total += price*quantity;
         }
         return total;
      },
     increaseQuantity(item, howMuch) { 
-        for (const good of this.items) {
+        const {items} = this
+        for (const good of items) {
             
             if (good.name === item) {
                 good.quantity += howMuch;
@@ -84,33 +93,36 @@ basket.addItem({ name: 'apple', price: 40 });
 basket.addItem({ name: 'pear', price: 20 });
 basket.addItem({ name: 'grape', price: 90 });
 basket.addItem({ name: 'orange', price: 110 });
+basket.addItem({ name: 'orange', price: 110 });
 console.log('Корзина после добавления позиций: ');
 basket.getItems();
-basket.removeItem('pear');
-console.log('Удалили одну позицию: ');
-basket.getItems();
+// basket.removeItem('pear');
+// console.log('Удалили одну позицию: ');
+// basket.getItems();
 
-basket.removeItem('apple');
-console.log('Удалили еще одну позицию: ');
-basket.getItems();
+// basket.removeItem('apple');
+// console.log('Удалили еще одну позицию: ');
+// basket.getItems();
 
-basket.removeItem('limone');
-basket.getItems();
+// basket.removeItem('limone');
+// basket.getItems();
 
-console.log(basket.clearAll());
-console.log('Состояние корзины после очистки: ');
-basket.getItems();
+// console.log(basket.clearAll());
+// console.log('Состояние корзины после очистки: ');
+// basket.getItems();
+console.log('Вы добавили товаров на сумму ', basket.countTotalPrice());
 
-basket.addItem({ name: 'orange', price: 110 });
-basket.addItem({ name: 'banana', price: 10 });
+
+// basket.addItem({ name: 'orange', price: 110 });
+// basket.addItem({ name: 'banana', price: 10 });
 basket.addItem({ name: 'kiwi', price: 70 });
-basket.addItem({ name: 'papaya', price: 220 });
+// basket.addItem({ name: 'papaya', price: 220 });
 basket.addItem({ name: 'mango', price: 300 });
 
-console.log('Добавили новый товар: ');
-basket.getItems();
+// console.log('Добавили новый товар: ');
+// basket.getItems();
 
-console.log('Вы добавили товаров на сумму ', basket.countTotalPrice());
+// console.log('Вы добавили товаров на сумму ', basket.countTotalPrice());
 
 
 basket.increaseQuantity('kiwi', 4);
@@ -118,13 +130,13 @@ basket.increaseQuantity('mango', 2)
 console.log('Увеличили кол-во товара: ');
 basket.getItems();
 
-basket.decreaseQuantity('kiwi', 3);
-basket.decreaseQuantity('orange', 3);
-basket.decreaseQuantity('kiwi', 2);
-basket.decreaseQuantity('papaya', 1);
-console.log('Уменьшили кол-во товара: ');
-basket.getItems();
+// basket.decreaseQuantity('kiwi', 3);
+// basket.decreaseQuantity('orange', 3);
+// basket.decreaseQuantity('kiwi', 2);
+// basket.decreaseQuantity('papaya', 1);
+// console.log('Уменьшили кол-во товара: ');
+// basket.getItems();
 
-basket.addItem('orange')
-console.log('Добавление существующего товара: ');
-basket.getItems();
+// basket.addItem('orange')
+// console.log('Добавление существующего товара: ');
+// basket.getItems();
