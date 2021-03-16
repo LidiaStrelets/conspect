@@ -23,3 +23,9 @@
     <img src="https://picsum.photos/id/237/800/400" alt="Чёрный щенок" />
 
   </picture>
+
+
+
+
+
+https://developer.mozilla.org/ru/docs/Glossary/IIFE
