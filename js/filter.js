@@ -51,3 +51,6 @@ const hardcorePlayers = players.filter(
   ({ timeInGame, onlineStatus }) => timeInGame > 200 && !onlineStatus,
 );
 console.table(hardcorePlayers);
+
+// поиск уникальных значений по массиву примитивов
+// filter((genre, index, array) => array.indexOf(genre) === index);
