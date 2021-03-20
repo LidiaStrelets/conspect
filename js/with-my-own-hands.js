@@ -15,8 +15,6 @@ const clients = [
 
 // console.log(handMap(clients, client => client.age * 2));
 
-// console.log(clients.map(client => client.age));
-
 function handFilter(array, callback) {
   const result = [];
   for (const item of array) {
@@ -122,19 +120,30 @@ function handReduce(array, callback, initialValue) {
 //   ),
 // );
 
-function bubble() {}
+function bubble(array, callback) {
+  let secondIterator = array.length - 1;
 
-const array = [6, 3, 7, 2, 1];
-console.log(array);
-for (let j = 0; j < array.length - 1; j += 1) {
-  for (let i = 0; i < array.length; i += 1) {
-    console.log(`iteration=${i + 1}, el1=${array[i]}, el2=${array[i + 1]}`);
-    if (array[i + 1] > array[i]) {
-      let temp = array[i];
-      array[i] = array[i + 1];
-      array[i + 1] = temp;
+  for (let j = 0; j < array.length; j += 1) {
+    for (let i = 0; i < secondIterator; i += 1) {
+      if (callback(array[i], array[i + 1])) {
+        let temp = array[i];
+        array[i] = array[i + 1];
+        array[i + 1] = temp;
+      }
     }
+
+    secondIterator -= 1;
   }
+
+  return array;
 }
 
-console.log(array);
+const array = [6, 3, 7, 2, 1];
+
+// console.log(
+//   bubble(['valter', 'anna', 'kate', 'joe', 'helga', 'lidia'], (a, b) =>
+//     a[0] < b[0] ? true : false,
+//   ),
+// );
+
+// console.log(bubble(array, (a, b) => (a > b ? true : false)));
