@@ -18,3 +18,86 @@
 a {
   color: inherit;
 }
+
+.listener-btn {
+  margin: 20px;
+}
+
+.myform {
+  margin: 10px;
+  /* background-color: orange; */
+}
+
+.output {
+  border: 1px solid tomato;
+}
+
+.box {
+  margin: 10px;
+  padding: 100px;
+  outline: 1px solid orange;
+  background-color: yellow;
+  width: 300px;
+  height: 300px;
+}
+.inner-box {
+  /* margin: 50px; */
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+.box__active {
+  background-color: red;
+}
+
+.modal {
+  /* opacity: 1; */
+  background-color: #fff;
+  /* position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px; */
+  width: 400px;
+  height: 250px;
+  padding: 15px;
+  border-radius: 10px;
+  outline: 1px solid red;
+  overflow: scroll;
+  /* display: none; */
+
+  transform: scale(1.1);
+
+  transition: transform 250ms ease-in-out;
+}
+.backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  /* margin: 0; */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+  background-color: rgba(255, 69, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
+}
+
+body.show-modal {
+  overflow: hidden;
+}
+body.show-modal .backdrop {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+
+body.show-modal .modal {
+  transform: scale(1);
+}
