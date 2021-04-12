@@ -1,184 +1,84 @@
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+.box {
+  margin: 20px;
 }
-
-/* .actions {
-  background-color: green;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-.actions > button {
-  display: inline-flex;
-  width: 150px;
-}
-.actions > button:not(:last-child) {
-  margin-bottom: 15px;
-}
-
-.current {
-  color: brown;
-} */
 a {
   color: inherit;
+  text-decoration: none;
   display: block;
 }
-
-/* .listener-btn {
-  margin: 20px;
-} */
-
-/* .myform {
-  margin: 10px; */
-/* background-color: orange; */
-/* } */
-
-/* .output {
-  border: 1px solid tomato;
-}
-
-.box {
-  margin: 10px;
-  padding: 100px;
-  outline: 1px solid orange;
-  background-color: yellow;
-  width: 300px;
-  height: 300px;
-} */
-/* .inner-box { */
-/* margin: 50px; */
-/* width: 100px;
-  height: 100px;
-  background-color: green;
-} */
-/* .box__active {
-  background-color: red;
-} */
-
-/* .modal { */
-/* opacity: 1; */
-/* background-color: #fff; */
-/* position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 50px; */
-/* width: 400px;
-  height: 250px;
-  padding: 15px;
-  border-radius: 10px;
-  outline: 1px solid red;
-  overflow: scroll; */
-/* display: none; */
-
-/* transform: scale(1.1); */
-/* 
-  transition: transform 250ms ease-in-out;
-}
-.backdrop {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  position: fixed; */
-/* margin: 0; */
-/* top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vw;
-  background-color: rgba(255, 69, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-
-  pointer-events: none;
-
-  transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
-}
-
-body.show-modal {
-  overflow: hidden;
-}
-body.show-modal .backdrop {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: initial;
-}
-
-body.show-modal .modal {
-  transform: scale(1);
-} */
-.list-item {
-  color: red;
-}
-td {
-  padding: 3px;
-  border: 1px solid black;
-}
-th {
-  padding: 3px;
-  border: 2px solid black;
-}
-table {
-  border-collapse: collapse;
-  margin: 15px;
-  /* margin-bottom: 15px; */
-}
-.red-score {
-  color: red;
-}
-.green-score {
-  color: green;
-}
-/* input.email:valid {
-  border: 1px solid green;
-}
-input.email:invalid {
-  border: 1px solid red;
-} */
-.backdrop {
-  visibility: hidden;
-  opacity: 0;
-  background-color: rgba(128, 8, 240, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+.parent {
+  width: 400px;
+  height: 400px;
+  background-color: lawngreen;
   padding: 20px;
-
-  overflow-y: scroll;
 }
-body.gallery-opened {
-  overflow: hidden;
+.child {
+  color: seashell;
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+  padding: 20px;
 }
-.gallery {
-  /* opacity: 0; */
-  position: absolute;
-  top: 20px;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  outline: 1px solid red;
+.inner-child {
+  color: seashell;
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+  padding: 20px;
+}
+.container {
+  margin-top: 20px;
+  border-top: 1px solid black;
+  padding-top: 20px;
+}
+.btn-collection:not(:last-child) {
+  margin-right: 10px;
+}
+ul {
+  list-style: none;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: space-between;
   justify-content: space-between;
-  width: 550px;
-  /* height: 1000px; */
-  padding: 10px;
+  width: 410px;
+  height: 60px;
+}
+.tags__btn.chosen {
+  border-color: chartreuse;
+  background-color: chartreuse;
+}
+.color-swatch {
+  width: 200px;
+  height: 150px;
+  /* background-color: #955014; */
+}
+.color-meta {
+  border-top: 1px solid grey;
   background-color: #fff;
-  overflow-y: scroll;
+  /* border-bottom: 1px solid grey;
+  border-right: 1px solid grey; */
+  padding: 10px;
+  width: 200px;
 }
-.close-btn {
-  position: absolute;
-  top: 5px;
-  right: 5px;
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  margin-bottom: 20px;
+  height: 690px;
 }
-
-body.gallery-opened .backdrop {
-  visibility: visible;
-  opacity: 1;
+p {
+  margin: 0;
+}
+.color-card {
+  display: inline-block;
+  border: 5px solid white;
+  transition: transform 100ms linear;
+}
+.color-card.is-active {
+  transform: perspective(480px) rotateX(10deg);
+}
+body {
+  transition: background-color 100ms linear;
 }
