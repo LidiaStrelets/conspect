@@ -6,6 +6,15 @@ a {
   text-decoration: none;
   display: block;
 }
+.nav-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.nav-item {
+  transition: color 150ms linear;
+}
+.nav-item:hover {
+  color: blueviolet;
+}
 .parent {
   width: 400px;
   height: 400px;
@@ -34,7 +43,7 @@ a {
 .btn-collection:not(:last-child) {
   margin-right: 10px;
 }
-ul {
+/* ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -42,7 +51,7 @@ ul {
   justify-content: space-between;
   width: 410px;
   height: 60px;
-}
+} */
 .tags__btn.chosen {
   border-color: chartreuse;
   background-color: chartreuse;
@@ -81,4 +90,43 @@ p {
 }
 body {
   transition: background-color 100ms linear;
+}
+.js-coords {
+  margin-bottom: 20px;
+}
+.js-output {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.function-name {
+  font-style: italic;
+  color: blueviolet;
+}
+.hide-this {
+  display: none;
+}
+.menu {
+  list-style: none;
+}
+.dish {
+  width: 400px;
+}
+.dish:not(:last-child) {
+  margin-bottom: 20px;
+}
+.menu img {
+  display: block;
+  max-width: 400px;
+  height: auto;
+
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 500ms linear;
+}
+.menu img.loaded {
+  transform: translateX(0);
+  opacity: 1;
+}
+.dish__description {
+  margin-top: 20px;
 }
