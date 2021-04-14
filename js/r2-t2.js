@@ -54,7 +54,7 @@ const createMenu = dishes =>
       ({ src, alt, width, height }) => `<li class="dish">
   <img loading="lazy"
   data-src="${src}"
-  class="lazy-load"
+  class="lazyload"
 alt="${alt}" width=${width} height=${height} />
   <p class="dish__description">
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quod
