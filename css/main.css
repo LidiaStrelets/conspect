@@ -130,3 +130,168 @@ body {
 .dish__description {
   margin-top: 20px;
 }
+.game-status {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+.game-status:hover + .rules {
+  left: 50%;
+  transform: translate(-50%, -20px);
+  opacity: 1;
+
+  z-index: 10;
+}
+.rules {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -80px);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 250ms ease, transform 250ms ease;
+
+  background-color: #fff;
+  border: 5px solid darkslategray;
+
+  width: 500px;
+
+  margin: 20px auto 0 auto;
+
+  font-size: 25px;
+  font-style: italic;
+}
+.game-field {
+  position: relative;
+  width: 510px;
+  height: 300px;
+  margin: 50px auto;
+
+  border: 5px solid darkslategray;
+  background-color: darkseagreen;
+
+  transition: background-color 150ms cubic-bezier(0, 0.44, 0, 0.5);
+}
+.game-field.loose {
+  background-color: red;
+}
+.game-path {
+  width: 150px;
+  height: 50px;
+  background-color: #fff;
+}
+.game-path:first-child {
+  position: absolute;
+  top: 125px;
+  left: 0;
+}
+.game-path:nth-child(2) {
+  position: absolute;
+  top: 175px;
+  left: 110px;
+}
+.game-path:nth-child(3) {
+  position: absolute;
+  top: 125px;
+  left: 230px;
+}
+.game-path:nth-child(4) {
+  position: absolute;
+  top: 75px;
+  right: 0;
+}
+.game-start,
+.game-finish {
+  position: absolute;
+  width: 5px;
+  height: 50px;
+}
+.game-start {
+  top: 125px;
+  left: -5px;
+  background-color: rgb(29, 197, 29);
+}
+.game-finish {
+  top: 75px;
+  right: -5px;
+  background-color: rgb(255, 72, 97);
+}
+.menu-title {
+  font-size: 50px;
+  font-weight: bold;
+}
+.restaurant-menu.opened {
+  position: relative;
+  opacity: 1;
+  pointer-events: initial;
+}
+.restaurant-menu {
+  position: absolute;
+  opacity: 0;
+  /* pointer-events: none;
+  transition: opacity 150ms linear; */
+
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+.dish-group {
+  font-size: 30px;
+  font-weight: bold;
+}
+.dish-subgroup {
+  font-size: 20px;
+  font-weight: bold;
+}
+.dish-item {
+  font-style: italic;
+  font-size: 15px;
+  font-weight: normal;
+}
+.menu-cathegory,
+.menu-subcathegory {
+  list-style: none;
+  margin: 0;
+  /* padding: 0; */
+}
+.menu-item {
+  position: relative;
+}
+.menu-cathegory {
+  position: absolute;
+  opacity: 0;
+}
+.menu-cathegory.opened {
+  position: relative;
+  opacity: 1;
+}
+
+.inner-box {
+  position: relative;
+}
+.menu-subitem {
+  position: relative;
+}
+.menu-subcathegory {
+  position: absolute;
+  opacity: 0;
+}
+.menu-subcathegory.opened {
+  position: relative;
+  opacity: 1;
+}
+.inner-text {
+  width: 400px;
+  height: 500px;
+  overflow: scroll;
+  outline: 1px solid red;
+  margin-bottom: 20px;
+}
+.first-part {
+  margin-bottom: 20px;
+}
+.first-part,
+.second-part {
+  font-size: 20px;
+}

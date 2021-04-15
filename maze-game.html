@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css
+"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Game</title>
+  </head>
+  <body>
+    <div class="box">
+      <p class="game-status">Ожидаю начала...</p>
+      <p class="rules">
+        Пересеките зеленую границу, чтобы начать игру. Проведите курсор через
+        лабиринт, не покидая тропы. Пересеките красную границу, чтобы победить.
+      </p>
+      <div class="game-field">
+        <div class="game-path"></div>
+        <div class="game-path"></div>
+        <div class="game-path"></div>
+        <div class="game-path"></div>
+        <div class="game-start"></div>
+        <div class="game-finish"></div>
+      </div>
+      <a href="./index.html">Back to main</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+    <script src="./js/maze.js" type="module"></script>
+  </body>
+</html>
