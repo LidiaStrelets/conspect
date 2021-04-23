@@ -1,0 +1,26 @@
+{
+  "name": "conspect",
+  "version": "1.0.0",
+  "description": "как вынести placeholder за пределы поля ввода?",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server  --mode=development",
+    "prod": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LidiaStrelets/conspect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LidiaStrelets/conspect/issues"
+  },
+  "homepage": "https://github.com/LidiaStrelets/conspect#readme",
+  "devDependencies": {
+    "webpack": "^5.35.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
