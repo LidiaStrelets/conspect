@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css
+"
+      rel="stylesheet"
+    />
+    <link href="./../css/main.min.css" rel="stylesheet" />
+    <title>Theory</title>
+  </head>
+  <body>
+    <div class="box">
+      <form class="user-form">
+        <label class="user-form__label">
+          Name:
+          <input
+            class="user-form__input"
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+          />
+        </label>
+        <label class="user-form__label">
+          Message:
+          <textarea
+            class="user-form__textarea"
+            name="message"
+            rows="6"
+            placeholder="Leave a comment here"
+          ></textarea>
+        </label>
+        <button class="user-form__btn" type="submit">Leave a comment</button>
+      </form>
+
+      <a class="menu__link" href="./../index.html">Back to main</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="./../js/user-form.js" type="module"></script>
+  </body>
+</html>

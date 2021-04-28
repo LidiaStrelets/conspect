@@ -1,50 +1,79 @@
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+.box {
+  margin: 20px;
 }
-.container {
-  // background-color: rgb(243, 225, 168);
-  width: 100%;
-  height: 100%;
-  // outline: 1px solid red;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu__link {
+  text-decoration: none;
+  color: brown;
+  transition: color 250ms linear;
+  font-size: 25px;
 
-  // margin: 2px;
+  &:hover,
+  &:focus {
+    color: crimson;
+  }
 }
-.gallery {
+.menu__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.user-form {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+.user-form__label {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+.user-form__btn {
+  width: 180px;
+  font-size: 20px;
+}
+.user-form__textarea,
+.user-form__input {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.color-swatch {
+  width: 200px;
+  height: 150px;
+  /* background-color: #955014; */
+}
+.color-meta {
+  border-top: 1px solid grey;
+  background-color: #fff;
+  /* border-bottom: 1px solid grey;
+  border-right: 1px solid grey; */
+  padding: 10px;
+  width: 200px;
+}
+.palette {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  list-style: none;
-  &__item {
-    border: 1px solid red;
-    width: 270px;
-    @media screen and(max-width: 240px) {
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
-    }
-    @media screen and(min-width: 241px) and(max-width: 700px) {
-      width: calc(50% - 5px);
-      &:nth-child(2n) {
-        margin-left: 10px;
-      }
-      &:nth-child(-n + 2) {
-        margin-bottom: 10px;
-      }
-    }
-    @media screen and(min-width: 701px) {
-      width: calc(25% - 7.5px);
-      &:not(:last-child) {
-        margin-right: 10px;
-      }
-    }
-    // @media screen and(min-width: 801px) {
-    //   width: 25%;
-    // }
-  }
+  justify-content: space-between;
+  align-content: space-between;
+  margin-bottom: 20px;
+  height: 690px;
+}
+p {
+  margin: 0;
+}
+.color-card {
+  display: inline-block;
+  border: 5px solid white;
+  transition: transform 100ms linear;
+}
+.color-card.is-active {
+  transform: perspective(480px) rotateX(10deg);
 }
